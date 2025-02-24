@@ -41,11 +41,15 @@ if(isset($_SESSION['user_id'])) {
             echo "Error updating themes: " . $conn->error;
         }
     } else {
-        echo "No themes selected";
+        echo '<script>
+        alert("No themes selected");
+        window.location.href = "../html/theme_choice.html";
+    </script>';
     }
 } else {
     echo "User ID not found in session";
 }
+
 
 // Close the database connection
 $conn->close();

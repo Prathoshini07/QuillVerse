@@ -120,8 +120,9 @@
               echo '</div></div>';
           }
       } else {
-          echo "No blogs found";
+        echo '<script> alert("No blogs found!"); window.location.href = "../index.php"; </script>';
       }
+
       $conn->close();
     ?>
     </div>

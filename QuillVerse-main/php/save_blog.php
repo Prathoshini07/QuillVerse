@@ -13,7 +13,6 @@ $servername = "sql111.infinityfree.com";
 $username = "if0_38173944";
 $password = "FB8x4t55Kgsg6K";
 $dbname = "if0_38173944_quillverse";
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -53,8 +52,9 @@ if ($stmt->execute()) {
     $stmt_update->execute();
     header("Location: ../index.php");
 } else {
-    echo "Error: " . $stmt->error;
+    echo '<script>alert("Error: ' . $stmt->error . '");</script>';
 }
+
 
 $stmt->close();
 $conn->close();
